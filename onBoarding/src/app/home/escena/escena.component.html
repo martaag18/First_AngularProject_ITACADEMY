@@ -1,4 +1,8 @@
-<h3>Dedicate many hours</h3>
-
-<p>A minimum of 30 hours a week. If that's not enough, you'll need to dedicate even more hours. At first, it may seem impossible, but you'll notice improvement quickly.</p>
-
+<div *ngFor="let step of steps" class="step-container mt-5">
+  <h3>{{ step.title }}</h3>
+  <p>{{ step.description }}</p>
+  <div class="image-container">
+    <img [src]="step.img" [alt]="step.title" class="image" />
+  </div>
+  <div [style.backgroundColor]="step.bgcolor" class="bg-color"></div>
+</div>
