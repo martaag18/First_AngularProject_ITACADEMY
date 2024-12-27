@@ -11,6 +11,20 @@ import { CommonModule } from '@angular/common';
   styleUrl: './escena.component.scss'
 })
 export class EscenaComponent {
+  @Input() receivedSteps: IStep[] = [];
+  currentStep: number = 0;
 
-  @Input() receivedSteps: IStep [] = [];
+  previousStep() {
+    if (this.currentStep > 0) {
+      this.currentStep--;
+    }
+  }
+
+  nextStep() {
+    if (this.currentStep < this.receivedSteps.length - 1) {
+      this.currentStep++;
+    }
+  }
+
+ 
 }
