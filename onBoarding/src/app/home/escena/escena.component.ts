@@ -26,5 +26,9 @@ export class EscenaComponent {
     }
   }
 
+  showStep(index:number){
+    this.currentStep = index;
+  }
+
  
 }

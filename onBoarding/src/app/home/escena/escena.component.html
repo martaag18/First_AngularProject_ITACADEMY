@@ -14,8 +14,8 @@
       <button *ngIf="currentStep > 0" (click) = "previousStep()" class="btn btn-primary">⟵</button>
       <button *ngIf="currentStep < receivedSteps.length -1 " (click)="nextStep()" class="btn btn-primary">⟶</button>
     </div>
-    <div class="d-flex justifu-content-center ms-3 mt-3 mb-3">
-      <span *ngFor="let _ of receivedSteps; let j = index" class="dot" [ngClass]="{'active-dot': j === currentStep}">
+    <div class="d-flex justify-content-center ms-3 mt-3 mb-3">
+      <span *ngFor="let _ of receivedSteps; let j = index" class="dot" [ngClass]="{'active-dot': j === currentStep}" (click)="showStep(j)">
       
       </span>
     </div>
