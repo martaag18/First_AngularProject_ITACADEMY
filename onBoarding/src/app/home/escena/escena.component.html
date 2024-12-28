@@ -1,26 +1,49 @@
-<div class = "d-flex justify-content-center align-items-center vh-100">
-  <div *ngFor = "let step of receivedSteps; let i=index" class= "card" [style.display] = "i === currentStep ? 'block' : 'none'">
-    <svg xmlns = "http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-       <!-- Fondo dinámico -->
-       <rect width="100" height="100" [attr.fill]="step.bgcolor"></rect>
-      <!-- Imagen cargada dinámicamente -->
+<div class="d-flex justify-content-center align-items-center vh-100 step-container">
+  <!-- Contenedor animado -->
+  <div *ngFor="let step of receivedSteps; let i = index"
+       class="card"
+       [@elegantSlide]="currentStep"
+       [style.display]="i === currentStep ? 'block' : 'none'">
+       
+    <!-- SVG con fondo dinámico e imagen -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+      <rect width="100" height="100" [attr.fill]="step.bgcolor"></rect>
       <image [attr.href]="step.img" x="0" y="0" width="100" height="100"></image>
     </svg>
+
+    <!-- Contenido del card -->
     <div class="card-body text-center">
-      <h5 class="card-title">{{step.title}}</h5>
-      <p class="card-text">{{step.description}}</p>
+      <h5 class="card-title">{{ step.title }}</h5>
+      <p class="card-text">{{ step.description }}</p>
     </div>
+
+    <!-- Botones de navegación -->
     <div class="d-flex justify-content-between px-4 mt-3">
-      <button *ngIf="currentStep > 0" (click) = "previousStep()" class="btn btn-primary">⟵</button>
-      <button *ngIf="currentStep < receivedSteps.length -1 " (click)="nextStep()" class="btn btn-primary">⟶</button>
+      <button *ngIf="currentStep > 0" (click)="previousStep()" class="btn btn-primary">⟵</button>
+      <button *ngIf="currentStep < receivedSteps.length - 1" (click)="nextStep()" class="btn btn-primary">⟶</button>
     </div>
     <div class="d-flex justify-content-center ms-3 mt-3 mb-3">
-      <span *ngFor="let _ of receivedSteps; let j = index" class="dot" [ngClass]="{'active-dot': j === currentStep}" (click)="showStep(j)">
-      
+      <span *ngFor="let _ of receivedSteps; let j = index" 
+            class="dot" 
+            [ngClass]="{'active-dot': j === currentStep}" 
+            (click)="showStep(j)">
       </span>
     </div>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
