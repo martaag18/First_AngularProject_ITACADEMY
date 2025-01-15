@@ -1,6 +1,12 @@
 # S5. Angular Basics
 
 
+|   |   |   |
+|---|---|---|
+| ![image](https://github.com/user-attachments/assets/4171a779-ef10-4bbd-9891-fb14ae850665) | ![image](https://github.com/user-attachments/assets/197382d5-c5c9-4478-80e0-06c42920213e) | ![image](https://github.com/user-attachments/assets/c44e15bc-a379-46da-8bd1-4019af368fc3) |
+
+
+
 ## 📄 Description
 
 In this project, we are building a digital onboarding application using Angular. 
