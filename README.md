@@ -16,8 +16,7 @@ HTML/SASS/Bootstrap 5: For structuring and styling the application to ensure res
 Angular: Framework for building the application, including components, services, and data binding.
 Interfaces: To define the structure of data used across components.
 @Input(): For passing data from parent to child components.
-ngFor: For rendering a list of items in the Escena component.
-
+Angular 19 directives @if @else @for
 
 
 ### 📋 Requirements
