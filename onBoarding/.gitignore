@@ -2,6 +2,7 @@
 
 # Compiled output
 /dist
+!dist/on-boarding
 /tmp
 /out-tsc
 /bazel-out
